@@ -70,15 +70,6 @@ function download_check () {
     #download
     echo "Downloading ${1}..."
     curl --progress-bar -C - -L --ssl "${2}" -o "${3}"
-
-    #verify
-    echo "Verifying ${1}..."
-    echo "${4}" "${3}" | sha256sum -c -
-    case "${?}" in
-    0) ;;
-    *)
-      echo "Verification failed, something may be wrong with the download."
-      exit 1;;
     esac
 }
 
@@ -141,7 +132,7 @@ for i in $(seq 0 $((${#urls[@]} - 1))); do
   version="$(echo ${rest} | sed -e 's/-chromeos.*$//')"
                         # extract string between first '-' and "-chromeos"
 
-  download_check "${name}" "${url}" "${tarfile}" "${sha256}"
+  download_check "${name}" "${url}" "${tarfile}"
   extract_install "${name}" "${tarfile}"
   update_device_json "${name}" "${version}"
 done
