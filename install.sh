@@ -49,20 +49,19 @@ case "${ARCH}" in
 "x86_64")
   urls+=('https://raa.dynu.net:444/gcc8-8.3.0-chromeos-x86_64.tar.xz')
   sha256s+=('ae8c8c33e4090f7fdbd39b2364754dcfc5f6bdd9a74062fde3eeb6272562f48b')
-  urls+=('https://raa.dynu.net:444/libressl-3.0.2-2-chromeos-x86_64.tar.xz')
-  sha256s+=('ac5d4d2aea9c58a107a1f0e954c7ccbb5e6347292c655ed3f378d92a950499e1')
   urls+=('https://raa.dynu.net:444/ruby-2.7.1-chromeos-x86_64.tar.xz')
   sha256s+=('bcce410dc64861dcb57c7e72e5eedc3df79ca94d6e0d0ee32e0d14d1fd3712c0')
   urls+=('https://raa.dynu.net:444/libiconv-1.16-chromeos-x86_64.tar.xz')
   sha256s+=('cc29b28830c4bc496b2ef495e9dd43d96e596f879d02d7176222575bb83b5088')
   urls+=('https://raa.dynu.net:444/git-2.28.0-chromeos-x86_64.tar.xz')
   sha256s+=('5607c0f34c5338f5709f02f6b0703ba4d40da1f7394500812f6c4e3ff9684961')
-
+  urls+=('https://raa.dynu.net:444/libssh2-1.9.0-chromeos-x86_64.tar.xz')
+  sha256s+=('d02623da747ecc95acdba69a056220ef579b01dae82a0cbfec2aa96c2ea8e914')
   ;;
 esac
 
-#  urls+=('https://raa.dynu.net:444/libssh2-1.9.0-chromeos-x86_64.tar.xz')
-#  sha256s+=('d02623da747ecc95acdba69a056220ef579b01dae82a0cbfec2aa96c2ea8e914')
+#  urls+=('https://raa.dynu.net:444/libressl-3.0.2-2-chromeos-x86_64.tar.xz')
+#  sha256s+=('ac5d4d2aea9c58a107a1f0e954c7ccbb5e6347292c655ed3f378d92a950499e1')
 
 # functions to maintain packages
 function download_check () {
