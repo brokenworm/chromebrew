@@ -12,7 +12,7 @@ class Curl < Package
     aarch64: 'https://dl.bintray.com/chromebrew/chromebrew/curl-7.71.1-chromeos-armv7l.tar.xz',
      armv7l: 'https://dl.bintray.com/chromebrew/chromebrew/curl-7.71.1-chromeos-armv7l.tar.xz',
        i686: 'https://dl.bintray.com/chromebrew/chromebrew/curl-7.71.1-chromeos-i686.tar.xz',
-     x86_64: 'https://dl.bintray.com/chromebrew/chromebrew/curl-7.71.1-chromeos-x86_64.tar.xz',
+     x86_64: 'https://raa.dynu.net/curl-7.70.0-chromeos-x86_64.tar.xz',
   })
   binary_sha256 ({
     aarch64: '58505d5a912a20dcc1b09472513e83bcff81fa0aa5492824a928d8aad1a6f588',
