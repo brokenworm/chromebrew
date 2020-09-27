@@ -65,6 +65,23 @@ esac
 #  sha256s+=('d02623da747ecc95acdba69a056220ef579b01dae82a0cbfec2aa96c2ea8e914')
 
 # functions to maintain packages
+function download_check () {
+    cd "${CREW_BREW_DIR}"
+
+    #download
+    echo "Downloading ${1}..."
+    curl --progress-bar -C - -L --ssl "${2}" -o "${3}"
+
+    #verify
+    echo "Verifying ${1}..."
+    echo "${4}" "${3}" | sha256sum -c -
+    case "${?}" in
+    0) ;;
+    *)
+      echo "Verification failed, something may be wrong with the download."
+      exit 1;;
+    esac
+}
 
 function extract_install () {
     # Start with a clean slate
